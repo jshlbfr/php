@@ -15,17 +15,17 @@
 </head>
 <body>
     <div align = "center">
-        <t1> <b> Multiplication Table <br> </b> </t1>
+        <t1> <b> Multiplication Table <br> <br> </b> </t1>
 
         <table border = "1">
         <tr>
-            <th style="background-color: black; color: beige;"> x </th>
+            <th style="background-color: black; color: beige;"> 0 </th>
             <?php
                 for ($h = 1; $h <=10; $h++){
                     if ($h % 2 == 0){
-                        echo '<th style = "text-align: center; background-color: black; color: beige;"> ' .$h. ' </th>';
+                        echo '<th style = "text-align: center; background-color: black; color: beige;"> 0 </th>';
                     } else {
-                        echo '<th style = "text-align: center; background-color: beige; color: black;"> ' .$h. ' </th>';
+                        echo '<th style = "text-align: center; background-color: beige; color: black;"> 0 </th>';
                     }
                 }
             ?>
@@ -33,9 +33,9 @@
         <?php
             for ($i = 1; $i <= 10; $i++){
                 if ($i % 2 == 0){
-                    echo '<tr style = "text-align: center; background-color: black; color: beige;"> <th> ' .$i. ' </th>';
+                    echo '<tr style = "text-align: center; background-color: black; color: beige;"> <th> 0 </th>';
                 } else {
-                    echo '<tr style = "text-align: center; background-color: beige; color: black;"> <th> ' .$i. ' </th>';
+                    echo '<tr style = "text-align: center; background-color: beige; color: black;"> <th> 0 </th>';
                 }
                 for ($j = 1; $j <= 10; $j++){
                     $product = $i * $j;
