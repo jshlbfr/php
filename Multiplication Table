@@ -4,7 +4,7 @@
    <title> Multiplication Table </title>
    <style>
         t1{
-            font-size: 40px;
+            font-size: 50px;
         }
         th, td {
             font-size: 25px;
@@ -15,10 +15,11 @@
 </head>
 <body>
     <div align = "center">
-        <t1> <b> Multiplication Table <br> <br> </b> </t1>
+        <t1> <b> Multiplication Table <br> </b> </t1>
 
         <table border = "1">
         <tr>
+        <br>
             <th style="background-color: black; color: beige;"> 0 </th>
             <?php
                 for ($h = 1; $h <=10; $h++){
