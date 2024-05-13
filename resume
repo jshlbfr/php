@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Galada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
+</head>
+<style>
+    .container{
+        width: 800px;
+        height: 1100px;
+        background-color: #D9D9D9;
+        margin: auto;
+        display: flex;
+    }
+    .container2{
+        width: 265px;
+        height: 1100px;
+        background-color: #363D46;
+        margin-left: 45px;
+    }
+    .container3{
+        font-size: 19px;
+        width: 480px;
+        height: 1100px;
+        background-color: #D9D9D9;
+        margin-left: 5px;
+    }
+    .container3 li{
+        padding-bottom: 15px;
+    }
+    .profile{
+        width: 255px;
+        height: 560px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 900px; 
+        top: 25px;
+    }
+    .profile img{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        border: 10px solid white;
+    }
+    .fa-map-marker-alt{
+        font-size: 30px;
+        color: #D9D9D9;
+        width: 26.46px; 
+        height: 38.934px; 
+        position: absolute;
+        left: 909px; 
+        top: 500.5px; 
+    }
+    .fa-envelope{
+        font-size: 30px;
+        color: #D9D9D9;
+        width: 26.46px; 
+        height: 38.934px; 
+        position: absolute;
+        left: 905px; 
+        top: 550.5px; 
+    }
+    .fa-square-phone{
+        font-size: 30px;
+        color: #D9D9D9;
+        width: 26.46px; 
+        height: 38.934px; 
+        position: absolute;
+        left: 907px; 
+        top: 600.5px; 
+    }
+    .firstname{
+        font-family: '"Bodoni",serif';
+        font-size: 40px;
+        color: #D9D9D9;
+        text-indent: 53px;
+        margin-top: 15px;
+    }
+    .surname{
+        font-family: "Bodoni",serif;
+        font-size: 40px;
+        color: #D9D9D9;
+        text-indent: 25px;
+        margin-top: -5px;
+    }
+    .job{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 9px;
+        color: #D9D9D9;
+        text-indent: 45px;
+        letter-spacing: 4.5px;
+        margin-top: 1px;
+    }
+    .address{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: #D9D9D9;
+        text-indent: 43px;
+        letter-spacing: 1px;
+        margin-top: 385px;
+        margin-left: 10px;
+    }
+    .email{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 19px;
+        font-weight: bold;
+        color: #D9D9D9;
+        text-indent: 43px;
+        letter-spacing: 1px;
+        margin-top: 26px;
+        margin-left: 10px;
+    }
+    .phone{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 19px;
+        font-weight: bold;
+        color: #D9D9D9;
+        text-indent: 43px;
+        letter-spacing: 1px;
+        margin-top: 27px;
+        margin-left: 10px;
+    }
+    h1{
+        font-family: "Bodoni",serif;
+        font-size: 40px;
+        font-weight: 100;
+        color: #D9D9D9;
+        left: 278px; 
+        top: 600.5px; 
+        margin-top: 35px;
+        margin-bottom: 5px;
+        margin-left: 18px;
+    }
+    .horizontal-line{
+        width: 90%;
+        height: 01px; 
+        margin-left: 15px;
+        background-color: #D9D9D9;
+    }  
+    .horizontal-line2{
+        width: 89%;
+        height: 1px; 
+        margin-left: 25px;
+        background-color: #363D46;
+    }  
+    .rate1{
+        width: 50%;
+        height: 10px; 
+        margin-top: 0px;
+        background-color: #363D46;
+    }
+    .rate2{
+        width: 89%;
+        height: 10px; 
+        margin-top: 0px;
+        background-color: #363D46;
+    }
+    .rate3{
+        width: 89%;
+        height: 10px; 
+        margin-top: 0px;
+        background-color: #363D46;
+    }
+    .rate4{
+        width: 89%;
+        height: 10px; 
+        margin-top: 0px;
+        background-color: #363D46;
+    }
+      
+    h2{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: #D9D9D9;
+        left: 278px; 
+        top: 600.5px; 
+        margin-top: 35px;
+        margin-bottom: 5px;
+        margin-left: 18px;
+    } 
+    .preschool{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        color: #D9D9D9;
+        text-indent: 0px;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .highschool{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        color: #D9D9D9;
+        text-indent: 0px;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .seniorhigh{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        color: #D9D9D9;
+        text-indent: 0px;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .college{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        color: #D9D9D9;
+        text-indent: 0px;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .institute{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 17px;
+        color: #D9D9D9;
+        text-indent: 0px;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    h3{
+        font-family: "Bodoni",serif;
+        font-size: 55px;
+        font-weight: 100;
+        color: #363D46;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        margin-left: 30px;
+    }
+    .aboutme{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: 100;
+        text-align: justify;
+        color: #363D46;
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 40px;
+    }
+    .languages{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        font-weight: 100;
+        margin-left: 15px;
+        margin-top: 20px;
+        word-spacing: 25px;    
+    }
+    .devicon-cplusplus-plain{
+        font-size: 30px;
+        color: #363D46;
+        position: absolute;
+        left: 1180px; 
+        top: 1040.5px; 
+    }
+    .fa-java{
+        font-size: 30px;
+        color: #363D46;
+        position: absolute;
+        left: 1254px; 
+        top: 1040.5px; 
+    }
+    .fa-python{
+        font-size: 30px;
+        color: #363D46;
+        position: absolute;
+        left: 1344px; 
+        top: 1040.5px; 
+    }
+    .fa-php{
+        font-size: 30px;
+        color: #363D46;
+        position: absolute;
+        left: 1430px; 
+        top: 1040.5px; 
+    }
+    .fa-html5{
+        font-size: 30px;
+        color: #363D46;
+        position: absolute;
+        left: 1512px; 
+        top: 1040.5px; 
+    }
+    .fa-css3-alt{
+        font-size: 30px;
+        color: #363D46;
+        position: absolute;
+        left: 1588px; 
+        top: 1040.5px; 
+    }
+
+</style>
+<body>
+<?php
+    //container2
+    $firstname = "JOSHUA";
+    $surname = "ALBUFERA";
+    $job = "SOFTWARE ENGINEER";
+    $address = "Manila, Philippines";
+    $email = "202211028@fit.edu.ph";
+    $phone = "09761936103";
+    $preschool = "Our Lady of Peace School";
+    $highchool = "Our Lady of Peace School";
+    $seniorhigh = "Our Lady of Peace School";
+    $college = "Far Easter University";
+    $institute = "Instiute of Technology";
+
+    //container3
+    $aboutme = "I’m Joshua Albufera, a code enthusiast who thrives on turning 
+                coffee into elegant algorithms. With a background in computer science and 
+                a love for clean code, I’ve crafted applications ranging from e-commerce 
+                platforms to mobile games. When I’m not debugging, you’ll find me exploring 
+                new libraries or contributing to open-source projects.";
+    $exp1 = "COLLEGE INTERNSHIP (2013-2014) - ACCENTURE";
+    $exp2 = "JUNIOR PROGRAMMER (2015-2017) - MICROSOFT";
+    $exp3 = "SENIOR PROGRAMMER (2018-2021) - GOOGLE";
+    $exp4 = "SENIOR DEVELOPER (2021-PRESENT) - APPLE";
+    $skill1 = "PROGRAMMING ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 90%";                                    
+    $skill2 = "VIDEO EDITING |||||||||||||||||||||||||||||||||||||||||| 60%";
+    $skill3 = "DIGITAL ART |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| 80%";
+    $skill4 = "GRAPHIC DESIGN |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||100%";
+    $languages = "C++    JAVA    PYTHON    PHP    HTML    CSS"
+
+?>
+    <div class="container">
+    <div class="container2">
+        <div class="firstname"><?php echo $firstname; ?></div>
+        <div class="surname"><?php echo $surname; ?></div>
+        <div class="job"><?php echo $job; ?></div>
+        <div class="profile">
+        <img src="profile.jpg";>
+        </img>
+        </div>
+            <div class="address"></b><?php echo $address; ?></div>
+            <div class="email"><?php echo $email; ?></div>
+            <div class="phone"><?php echo $phone; ?></div>
+            <h1>EDUCATION</h1>
+            <div class="horizontal-line"></div>
+            <h2>PRE-SCHOOL</h2>
+            <ul class="preschool">
+            <li><?php echo $preschool; ?></li>
+            </ul>
+            <h2>HIGH SCHOOL</h2>
+            <ul class="highschool">
+                <li><?php echo $highchool; ?></li>
+            </ul>
+            <h2>SENIOR HIGH SCHOOL</h2>
+            <ul class="seniorhigh">
+                <li><?php echo $seniorhigh; ?></li>
+            </ul>
+            <h2>COLLEGE</h2>
+            <ul class="college">
+                <li><?php echo $college . "</br>" . $institute; ?></li>
+            </ul>
+            <i class="fas fa-map-marker-alt"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-square-phone"></i>
+        </div>
+        <div class="container3">
+            <h3>ABOUT ME</h3>
+            <div class="horizontal-line2"></div>
+            <div class="aboutme"></b><?php echo $aboutme; ?></div>
+            <h3>EXPERIENCE</h3>
+            <div class="horizontal-line2"></div>
+                <ul>
+                    <li><?php echo $exp1; ?></li>
+                    <li><?php echo $exp2; ?></li>
+                    <li><?php echo $exp3; ?></li>
+                    <li><?php echo $exp4; ?></li>
+                </ul>
+            <h3>SKILLS</h3>
+            <div class="horizontal-line2"></div>
+                <ul>
+                    <li><?php echo $skill1; ?></li>
+                    <li><?php echo $skill2; ?></li>
+                    <li><?php echo $skill3; ?></li>
+                    <li><?php echo $skill4; ?></li>
+                </ul>
+            <h3>PROGRAMMING LANGUAGES</h3>
+            <div class="horizontal-line2"></div>
+            <div class="languages"><?php echo $languages; ?></div>
+            <i class="devicon-cplusplus-plain"></i>
+            <i class="fa-brands fa-java"></i>
+            <i class="fa-brands fa-python"></i>
+            <i class="fa-brands fa-php"></i>
+            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-css3-alt"></i>
+        </div>
+    </div>
+</body>
+</html>
