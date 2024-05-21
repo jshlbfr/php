@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FA3_1</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 80%;
+            background-color: #fff;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GREY'S ANATOMY</h1>
+    <div class="container">
+        <?php
+        $tableInfo = array(
+            array('No', 'Name', 'Image', 'Age', 'Birthday', 'Contact Number'),
+            array('1', 'Alex Karev', '<img src="alex.jpg" alt="profile">', '26', 'June 1, 1976', '(555) 456-7890'),
+            array('2', 'Callie Torres', '<img src="callie.jpg" alt="profile">', '28', 'November 28, 1971', '(555) 901-2345'),
+            array('3', 'Cristina Yang', '<img src="cristina.jpg" alt="profile">', '28', 'April 5, 1975', '(555) 987-6543'),
+            array('4', 'Derek Shepher', '<img src="derek.jpg" alt="profile">', '32', 'March 18, 1969', '(555) 876-5432'),
+            array('5', 'George OMalley', '<img src="george.jpg" alt="profile">', '26', 'February 12, 1981', '(555) 789-1234'),
+            array('6', 'Izzie Stevens', '<img src="izzie.jpg" alt="profile">', '26', 'October 3, 1980', '(555) 234-5678'),
+            array('7', 'Mark Sloan', '<img src="sloan.jpg" alt="profile">', '30', 'July 7, 1969', '(555) 567-8901'),
+            array('8', 'Meredith Grey', '<img src="meredith.jpg" alt="profile">', '27', 'November 27, 1973', '(555) 123-4567'),
+            array('9', 'Miranda Bailey', '<img src="bailey.jpg" alt="profile">', '38', 'September 30, 1957', '(555) 345-6789'),
+            array('10', 'Richard Webber', '<img src="webber.jpg" alt="profile">', '50', 'May 15, 1957', '(555) 678-9012')
+        );
+        ?>
+
+        <table>
+            <?php foreach ($tableInfo as $index => $row) : ?>
+                <tr>
+                    <?php foreach ($row as $cell) : ?>
+                        <td><?php echo $cell; ?></td>
+                    <?php endforeach; ?>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+</body>
+
+</html>
