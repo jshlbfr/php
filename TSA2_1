@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FRUITS</title>
+</head>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    .fruit-container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid white;
+    }
+
+    th,
+    td {
+        padding: 15px;
+    }
+
+    th {
+        text-align: center;
+        border: 2px solid white;
+        background-color: #363D46;
+        color: #f5f5f5;
+    }
+
+    td {
+        text-align: center;
+        border: 2px solid white;
+        background-color: lightgray;
+    }
+
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .fruit-image {
+        max-width: 100px;
+        height: auto;
+        background-color: white;
+        border-radius: 10%;
+    }
+</style>
+
+<body>
+    <?php
+    $fruits = array(
+        array(
+            'image' => 'apple.png',
+            'name' => 'Apple',
+            'description' => 'A sweet, crisp fruit that comes in many varieties and colors, typically red, green, or yellow.',
+            'facts' => 'Rich in fiber, especially pectin. Good source of vitamin C. Contains various antioxidants.'
+        ),
+        array(
+            'image' => 'banana.jpg',
+            'name' => 'Banana',
+            'description' => 'A long, curved fruit with a thick peel and soft, sweet flesh, commonly eaten raw or used in desserts.',
+            'facts' => 'High in potassium. Good source of vitamin B6 and vitamin C. Contains dietary fiber.'
+        ),
+        array(
+            'image' => 'grape.png',
+            'name' => 'Grape',
+            'description' => 'A small, juicy fruit that grows in clusters and can be eaten fresh or used to make wine, raisins, or juice.',
+            'facts' => 'Contains vitamins C and K. Rich in antioxidants, especially resveratrol. Provides dietary fiber.'
+        ),
+        array(
+            'image' => 'mango.jpg',
+            'name' => 'Mango',
+            'description' => 'A tropical stone fruit with juicy, sweet flesh and a large pit, known for its vibrant orange color and fragrant aroma.',
+            'facts' => 'High in vitamin C and vitamin A. Contains dietary fiber. Rich in antioxidants.'
+        ),
+        array(
+            'image' => 'strawberry.png',
+            'name' => 'Strawberry',
+            'description' => 'A small, red fruit with tiny seeds on its surface, known for its sweetness and fragrant aroma.',
+            'facts' => 'High in vitamin C. Contains manganese and folate. Rich in antioxidants and dietary fiber.'
+        ),
+        array(
+            'image' => 'orange.png',
+            'name' => 'Orange',
+            'description' => 'A citrus fruit with a thick, orange peel and juicy, segmented flesh, commonly consumed fresh or as juice.',
+            'facts' => 'Excellent source of vitamin C. Contains fiber, particularly pectin. Provides potassium and antioxidants.'
+        ),
+        array(
+            'image' => 'lemon.png',
+            'name' => 'Lemon',
+            'description' => 'A bright yellow citrus fruit with a tart, tangy flavor, used for its juice, zest, and as a flavoring agent.',
+            'facts' => 'Very high in vitamin C. Contains citric acid. Provides soluble fiber, especially pectin.'
+        ),
+        array(
+            'image' => 'peach.png',
+            'name' => 'Peach',
+            'description' => 'A soft, fuzzy fruit with sweet, juicy flesh and a large pit, typically enjoyed fresh or in desserts.',
+            'facts' => 'Rich in vitamins A and C. Contains dietary fiber. Provides potassium.'
+        ),
+        array(
+            'image' => 'kiwi.png',
+            'name' => 'Kiwi',
+            'description' => 'A small, brown, fuzzy fruit with bright green or yellow flesh and tiny black seeds, known for its tart-sweet flavor.',
+            'facts' => 'Extremely high in vitamin C. Good source of vitamin K and vitamin E. Contains dietary fiber.'
+        ),
+        array(
+            'image' => 'watermelon.png',
+            'name' => 'Waternelon',
+            'description' => 'A large, green-skinned fruit with sweet, juicy red or pink flesh and black seeds, popular in summer.',
+            'facts' => 'High water content. Contains vitamins A and C. Provides antioxidants like lycopene.'
+        ),
+        array(
+            'image' => 'raspberry.png',
+            'name' => 'Raspberry',
+            'description' => 'A small, delicate berry with a tart-sweet flavor, composed of many tiny drupelets clustered together.',
+            'facts' => 'High in dietary fiber. Contains vitamin C and manganese. Rich in antioxidants.'
+        ),
+    );
+
+    usort($fruits, function ($a, $b) {
+        return strcmp($a['name'], $b['name']);
+    });
+
+    ?>
+    <div class="fruit-container">
+        <table>
+            <thead>
+                <tr>
+                    <thead>
+                        <th colspan="4">
+                            <?php echo "My Fruits"; ?>
+                        </th>
+                    </thead>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Facts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($fruits as $fruit) : ?>
+                    <tr>
+                        <td><img class="fruit-image" src="fruits/<?php echo $fruit['image']; ?>"></td>
+                        <td><?php echo $fruit['name']; ?></td>
+                        <td><?php echo $fruit['description']; ?></td>
+                        <td><?php echo $fruit['facts']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
