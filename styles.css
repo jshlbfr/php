@@ -1,0 +1,109 @@
+.title {
+  position: absolute;
+  top: 1%;
+  color: white;
+  font-size: 100px;
+}
+
+.container,
+.container-woody,
+.container-buzz,
+.container-jessie,
+.container-rex,
+.container-slinky {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("images/image.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.character {
+  text-decoration: none;
+}
+
+.character img {
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  margin: 20px;
+  border-radius: 20%;
+  border: 10px solid white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #f9f9f9;
+}
+
+.story-woody,
+.story-buzz,
+.story-jessie,
+.story-rex,
+.story-slinky {
+  max-width: 1000px;
+  margin: 200px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.story-woody img,
+.story-buzz img,
+.story-jessie img,
+.story-rex img,
+.story-slinky img {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  border: 10px solid skyblue;
+}
+
+.story-woody h2,
+.story-buzz h2,
+.story-jessie h2,
+.story-rex h2,
+.story-slinky h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.story-woody p,
+.story-buzz p,
+.story-jessie p,
+.story-rex p,
+.story-slinky p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: #666;
+}
+
+H1 {
+  color: whitesmoke;
+  font-size: 50px;
+  text-align: center;
+}
+
+.go-back {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: skyblue;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.go-back:hover {
+  background-color: #0056b3;
+}
