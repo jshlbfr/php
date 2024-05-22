@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume of Shapes</title>
+</head>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+
+    table {
+        width: 50%;
+        margin: auto;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #363D46;
+        color: #fff;
+    }
+
+    td {
+        width: auto;
+        background-color: #f9f9f9;
+    }
+</style>
+
+<body>
+    <?php
+    $sidesLength = 6;
+    $length = 5;
+    $width = 4;
+    $height = 3;
+    $pi = 3.14;
+    $radius = 12;
+    $baseArea = 10;
+
+    function cube($sidesLength)
+    {
+        return $sidesLength ** 3;
+    }
+
+    function rightRectangularPrism($length, $width, $height)
+    {
+        return $length * $width * $height;
+    }
+
+    function prismORcylinder($pi, $radius, $height)
+    {
+        return $pi * $radius ** 2 * $height;
+    }
+
+    function pyramid($baseArea, $height)
+    {
+        return (1 / 3) * $baseArea * $height;
+    }
+
+    function cone($pi, $radius, $height)
+    {
+        return (1 / 3) * $pi * $radius ** 2 * $height;
+    }
+
+    function sphere($pi, $radius)
+    {
+        return (4 / 3) * $pi * $radius ** 3;
+    }
+    ?>
+    <table>
+        <tr>
+            <thead>
+                <th colspan="4"><?php
+                                echo "Volume of Shapes";
+                                ?></th>
+            </thead>
+            <th>Shape</th>
+            <th>Values</th>
+            <th>Formula</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td>Cube</td>
+            <td>sidesLength = 6</td>
+            <td>V = side_length^3</td>
+            <td><?php
+                echo cube($sidesLength);
+                ?></td>
+        </tr>
+        <tr>
+            <td>Right Rectangle Prism</td>
+            <td>
+                length = 5,
+                width = 4,
+                height = 3
+            </td>
+            <td>V = length * width * height</td>
+            <td><?php
+                echo rightRectangularPrism($length, $width, $height);
+                ?></td>
+        </tr>
+        <tr>
+            <td>Prism or Cylinder</td>
+            <td>
+                π = 3.14,
+                radius = 12,
+                height = 3
+            </td>
+            <td>V = π * radius^2 * height</td>
+            <td><?php
+                echo prismORcylinder($pi, $radius, $height);
+                ?></td>
+        </tr>
+        <tr>
+            <td>Pyramid</td>
+            <td>
+                baseArea = 10,
+                height = 3
+            </td>
+            <td>V = (1/3) * base_area * height</td>
+            <td><?php
+                echo pyramid($baseArea, $height);
+                ?></td>
+        </tr>
+        <tr>
+            <td>Cone</td>
+            <td>
+                π = 3.14,
+                radius = 12,
+                height = 3
+            </td>
+            <td>V = (1/3) * π * radius^2 * height</td>
+            <td><?php
+                echo cone($pi, $radius, $height);
+                ?></td>
+        </tr>
+        <tr>
+            <td>Sphere</td>
+            <td>
+                π = 3.14,
+                radius = 12,
+            </td>
+            <td>V = (4/3) * π * radius^3</td>
+            <td><?php
+                echo sphere($pi, $radius);
+                ?></td>
+        </tr>
+    </table>
+</body>
+
+</html>
