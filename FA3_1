@@ -77,10 +77,10 @@
         ?>
 
         <table>
-            <?php foreach ($tableInfo as $index => $row) : ?>
+            <?php foreach ($tableInfo as $ArrayIndex => $character) : ?>
                 <tr>
-                    <?php foreach ($row as $cell) : ?>
-                        <td><?php echo $cell; ?></td>
+                    <?php foreach ($character as $info) : ?>
+                        <td><?php echo $info; ?></td>
                     <?php endforeach; ?>
                 </tr>
             <?php endforeach; ?>
