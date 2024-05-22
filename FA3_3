@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+        table {
+            width: 70%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #363D46;
+            color: #fff;
+        }
+
+        td {
+            width: 50%;
+            background-color: #f9f9f9;
+        }
+
+</style>
+<body>
+    <?php
+        $x = 25;
+        $y = 13;
+        $z = 6;
+
+        function sum($x, $y, $z)
+        {
+            $sum = $x + $y + $z;
+            $sumResult = $sum;
+            return $sum;
+        }
+        $sumResult = sum($x, $y, $z);
+
+        function difference($x, $y, $z)
+        {
+            $difference = $x - $y - $z;
+            $differenceResult = $difference;
+            return $difference;
+        }
+        $differenceResult = difference($x, $y, $z);
+
+        function product($x, $y, $z)
+        {
+            $product = $x * $y * $z;
+            $productResult = $product;
+            return $product;
+        }
+        $productResult = product($x, $y, $z);
+
+        function quotient($x, $y, $z)
+        {
+            $quotient = $x / $y / $z;
+            $quotientResult = $quotient;
+            return $quotient;
+        }
+        $quotientResult = quotient($x, $y, $z);
+        
+        ?>
+        <table>
+            <tr>
+                <thead>
+                    <th colspan ="2"><?php
+        echo "My Parameter Values: 25, 13, 6";
+        ?></th>
+            </thead>
+                <th>Operation</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>Addition</td>
+                <td><?php
+        echo $sumResult;
+        ?></td>
+            </tr>
+            <tr>
+                <td>Subtraction</td>
+                <td><?php
+        echo $differenceResult;
+        ?></td>
+            </tr>
+            <tr>
+                <td>Multiplication</td>
+                <td><?php
+        echo $productResult;
+        ?></td>
+            </tr>
+            <tr>
+                <td>Division</td>
+                <td><?php
+        echo $quotientResult;
+        ?></td>
+            </tr>
+    </table>
+</body>
+</html>
