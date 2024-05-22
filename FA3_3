@@ -11,7 +11,7 @@
             font-size: 25px;
         }
         table {
-            width: 70%;
+            width: 40%;
             margin: auto;
             border-collapse: collapse;
         }
