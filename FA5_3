@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .output {
+        font-size: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <h1>Favorite Color 1: </h1><input type="text" name="color1"><br>
+        <h1>Favorite Color 2: </h1><input type="text" name="color1"><br>
+        <h1>Favorite Color 3: </h1><input type="text" name="color1"><br>
+        <h1>Favorite Color 4: </h1><input type="text" name="color1"><br>
+        <h1>Favorite Color 5: </h1><input type="text" name="color1"><br>
+        <input type="submit">
+    </form>
+
+    <?php 
+    session_start();
+    if($_SESSIO['logged']){
+        echo <br><a 
+    }
+    ?>
+</body>
+
+</html>
