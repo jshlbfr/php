@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Information</title>
+</head>
+<body>
+    <h2>Enter Your Personal Information</h2>
+    <form method="post">
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname"><br><br>
+        <label for="middlename">Middle Name:</label>
+        <input type="text" name="middlename"><br><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname"><br><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+
+    <?php
+    if(isset($_POST['submit'])){
+        // Get user input
+        $firstname = $_POST['firstname'];
+        $middlename = $_POST['middlename'];
+        $lastname = $_POST['lastname'];
+
+        // Set cookies
+        setcookie("firstname", $firstname, time() + 10); // expires after 10 seconds
+        setcookie("middlename", $middlename, time() + 20); // expires after 20 seconds
+        setcookie("lastname", $lastname, time() + 310); // expires after 310 seconds
+
+        echo "<p>Cookies set successfully!</p>";
+    }
+    ?>
+
+    <h2>Check Cookies</h2>
+    <p>Refreshing this page will check if cookies are set.</p>
+    <?php
+    // Check if cookies are set
+    if(isset($_COOKIE['firstname'])){
+        echo "<p>First Name: ".$_COOKIE['firstname']."</p>";
+    }
+    if(isset($_COOKIE['middlename'])){
+        echo "<p>Middle Name: ".$_COOKIE['middlename']."</p>";
+    }
+    if(isset($_COOKIE['lastname'])){
+        echo "<p>Last Name: ".$_COOKIE['lastname']."</p>";
+    }
+    ?>
+</body>
+</html>
