@@ -1,49 +1,89 @@
 <!DOCTYPE html>
 <html>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .output {
+        font-size: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+</style>
+
 <head>
     <title>Personal Information</title>
 </head>
+
 <body>
-    <h2>Enter Your Personal Information</h2>
+    <h2>Personal Information</h2>
     <form method="post">
-        <label for="firstname">First Name:</label>
-        <input type="text" name="firstname"><br><br>
-        <label for="middlename">Middle Name:</label>
-        <input type="text" name="middlename"><br><br>
-        <label for="lastname">Last Name:</label>
-        <input type="text" name="lastname"><br><br>
-        <input type="submit" name="submit" value="Submit">
+        <h1>First Name: </h1><input type="text" name="fname"><br>
+        <h1>Middle Name: </h1><input type="text" name="mname"><br>
+        <h1>Last Name: </h1><input type="text" name="lname"><br>
+        <input type="submit">
     </form>
 
     <?php
-    if(isset($_POST['submit'])){
+    if (isset($_POST['submit'])) {
         // Get user input
-        $firstname = $_POST['firstname'];
-        $middlename = $_POST['middlename'];
-        $lastname = $_POST['lastname'];
+        $firstname = $_POST['fname'];
+        $middlename = $_POST['mname'];
+        $lastname = $_POST['lname'];
 
         // Set cookies
-        setcookie("firstname", $firstname, time() + 10); // expires after 10 seconds
-        setcookie("middlename", $middlename, time() + 20); // expires after 20 seconds
-        setcookie("lastname", $lastname, time() + 310); // expires after 310 seconds
+        setcookie("fname", $fname, time() + 10);
+        setcookie("mname", $mname, time() + 20);
+        setcookie("lname", $lname, time() + 310);
 
         echo "<p>Cookies set successfully!</p>";
     }
-    ?>
 
-    <h2>Check Cookies</h2>
-    <p>Refreshing this page will check if cookies are set.</p>
-    <?php
-    // Check if cookies are set
-    if(isset($_COOKIE['firstname'])){
-        echo "<p>First Name: ".$_COOKIE['firstname']."</p>";
+    if (isset($_COOKIE['fname'])) {
+        echo "<p>First Name: " . $_COOKIE['fname'] . "</p>";
     }
-    if(isset($_COOKIE['middlename'])){
-        echo "<p>Middle Name: ".$_COOKIE['middlename']."</p>";
+    if (isset($_COOKIE['mname'])) {
+        echo "<p>Middle Name: " . $_COOKIE['mname'] . "</p>";
     }
-    if(isset($_COOKIE['lastname'])){
-        echo "<p>Last Name: ".$_COOKIE['lastname']."</p>";
+    if (isset($_COOKIE['lname'])) {
+        echo "<p>Last Name: " . $_COOKIE['lname'] . "</p>";
     }
     ?>
 </body>
+
 </html>
