@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .output {
+        font-size: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+</head>
+
+<body>
+    <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <h1>First Name: </h1><input type="text" name="fname"><br>
+        <h1>Middle Name: </h1><input type="text" name="mname"><br>
+        <h1>Last Name: </h1><input type="text" name="lname"><br>
+        <h1>Date of Birth: </h1><input type="date" name="birth"><br>
+        <h1>Address: </h1><input type="text" name="address"><br>
+        <input type="submit">
+    </form>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        if (!empty($_GET['fname']) && !empty($_GET['lname'])) {
+            $fname = $_GET['fname'];
+            $mname = $_GET['mname'];
+            $lname = $_GET['lname'];
+            $birth = $_GET['birth'];
+            $address = $_GET['address'];
+
+
+            if (empty($fname) || empty($mname) || empty($lname) || empty($birth) || empty($address)) {
+                echo "<div class='output'><br>Please fill out all the fields.</div>";
+            } else {
+                echo "<div class='output'>";
+                echo "<br>First Name: $fname<br>";
+                echo "Middle Name: $mname<br>";
+                echo "Last Name: $lname<br>";
+                echo "Date of Birth: $birth<br>";
+                echo "Address: $address<br>";
+                echo "</div>";
+            }
+        }
+    }
+    ?>
+</body>
+
+</html>
