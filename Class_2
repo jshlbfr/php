@@ -1,0 +1,66 @@
+class Restaurant:
+    def __init__(self):
+        self.resto_menu_items = {}
+        self.resto_book_table = []
+        self.resto_customer_orders = []
+
+    def add_item_to_menu(self):
+        food = input("\nEnter food item : ")
+        self.resto_menu_items[food] = None
+
+    def book_table(self):
+        table = input("\nEnter table number to book: ")
+        self.resto_book_table.append(table)
+
+    def customer_order(self):
+        table = input("\nEnter table number : ")
+        order = input("\nEnter your order: ")
+        self.resto_customer_orders.append((table, order))
+
+    def view_menu(self):
+        return self.resto_menu_items
+
+    def view_order(self):
+        return self.resto_customer_orders
+
+    def main(self):
+        while True:
+            print("\n----- RESTAURANT -----")
+            print("[1] Add to Menu")
+            print("[2] View Menu")
+            print("[3] Book Table")
+            print("[4] Order from Menu")
+            print("[5] View Order")
+            print("[6] Exit")
+            print("----------------------")
+            choice = input("Enter your choice: ")
+
+            if choice == '1':
+                self.add_item_to_menu()
+                add = input("\nDo you want to add another item? (Y/N): ")
+                while add.lower() == 'y':
+                    self.add_item_to_menu()
+                    add = input("\nDo you want to add another item? (Y/N): ")
+            elif choice == '2':
+                print("\n----- Menu Items -----")
+                for item in self.view_menu():
+                    print(item)
+            elif choice == '3':
+                self.book_table()  
+            elif choice == '4':
+                print("\n----- Menu Items -----")
+                for item in self.view_menu():
+                    print(item)
+                self.customer_order()
+            elif choice == '5':
+                print("\n----- Customer Orders -----")
+                for table, order in self.view_order():
+                    print(f"\nTable {table}: {order}")
+            elif choice == '6':
+                print("\nThank you. Please come again!\n")
+                break
+            else:
+                print("\nInvalid choice.")
+                
+restaurant = Restaurant()
+restaurant.main()
