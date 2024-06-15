@@ -1,0 +1,21 @@
+class Student:
+    def __init__(self, student_name, student_course, student_marks):
+        self.student_name = student_name
+        self.student_course = student_course
+        self.student_marks = student_marks
+
+student = Student("Josh", "BSCSSE", 3.5)
+
+print("\n----- Original Values -----")
+print("Name : ", student.student_name)
+print("Course : ", student.student_course)
+print("Marks : ", student.student_marks)
+
+student.student_name = "Joshua Albufera"
+student.student_course = "Software Engineering"
+student.student_marks = 4.0
+
+print("\n----- Modified Values -----")
+print("Name : ", student.student_name)
+print("Course : ", student.student_course)
+print("Marks : ", student.student_marks)
